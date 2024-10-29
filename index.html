@@ -189,7 +189,7 @@
 <hr>
 <p>字符串+转义字符+注释<br>char &#x2F;&#x2F;字符类型  char ch&#x3D;’w’;     注：字符串的结束标志是一个”\0”的转义字符（转变原来字符的意思），计算字符串长度时”\0”是结束标志，不算作字符串内容。<br>char arr1[10]&#x3D;”abcdef”;  &#x2F;&#x2F;七个字符 char[7]<br>char arr2[]&#x3D;{‘a’,’b’,’c’,’d’,’e’,’f’};&#x2F;&#x2F;char[6]<br>printf(“%s\n”,arr1);   &#x2F;&#x2F;输出abcdef<br>printf(“%s\n”,arr2);   &#x2F;&#x2F;输出abcdef烫烫烫烫烫烫abcdef<br>字符串 &#x2F;&#x2F;”“双引号引起来的【C语言中没有字符串类型】<br>&#x2F;&#x2F; “\“转义为一个”&quot;打印，”\0”即输出”\0”<br>&#x2F;&#x2F;strlen();  &#x2F;&#x2F;求字符串长度的库函数，string length→#include&lt;string.h&gt;<br>int main()<br>{<br>    int len &#x3D; strlen(“abc”);<br>    printf(“%d\n”,len);   &#x2F;&#x2F;输出：3<br>    return 0;<br>}<br>%d 打印整型<br>%c 打印字符<br>%s 打印字符串<br>%f 打印float类型的数据<br>%lf 打印double类型的数据<br>%zu 打印size of返回值</p>
 <hr>
-<p>转义字符<br>\a 响铃  007<br>\b 退格  008<br>\f 换页  012<br>\n 换行 010<br>\r 回车  013<br>\t 水平制表  009<br>\v 垂直制表  011<br>\ 反斜杠  092<br>\? 问号字符  063<br>&#39; 单引号字符  039<br>&#39;‘双引号字符  034<br>\0 空字符；结束的标志  000<br>\ddd 任意字符  三位八进制<br>\xdd 任意字符  二位十六进制</p>
+<p>转义字符<br>\a 响铃  007<br>\b 退格  008<br>\f 换页  012<br>\n 换行 010<br>\r 回车  013<br>\t 水平制表  009<br>\v 垂直制表  011<br>\ 反斜杠  092<br>\? 问号字符  063<br>\‘ 单引号字符  039<br>\‘’双引号字符  034<br>\0 空字符；结束的标志  000<br>\ddd 任意字符  三位八进制<br>\xdd 任意字符  二位十六进制</p>
 <p>例：<br>printf(“%c\n”,’\130’);  &#x2F;&#x2F;输出：X    八进制130→换算成十进制&#x3D;88  ASCII编码中88→X<br>printf(“%c\n”,’\x60’);  &#x2F;&#x2F;输出：、   十六进制的60→换算成十进制&#x3D;96 ASCII编码中96→、</p>
 <hr>
 <p>注释：&#x2F;&#x2F;……或者”&#x2F;*     <em>&#x2F;“<br>&#x2F;</em> int a&#x3D; 10;<em>&#x2F;     →C语言注释风格，不支持嵌套注释，遇到</em>&#x2F;就结束<br>&#x2F;&#x2F; int a&#x3D;10；&#x2F;&#x2F;   →c++的注释风格</p>
