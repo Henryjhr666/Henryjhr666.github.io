@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2024 | 监护人世界</title>
+  <title>第二篇 | 监护人世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个简单的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="监护人世界">
-<meta property="og:url" content="http://example.com/archives/2024/index.html">
+  <meta name="description" content="2024年10月29日 接着今天凌晨的内容继续写点吧，这几天写的都是之前初始C语言学的，想要把笔记慢慢码到博客上……  正文【初识C语言】 char &#x2F;&#x2F; 字符数据类型short &#x2F;&#x2F; 短整型int &#x2F;&#x2F; 整型long &#x2F;&#x2F; 整型longlong &#x2F;&#x2F; 更长的整型double &#x2F;&amp;#x2F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二篇">
+<meta property="og:url" content="http://example.com/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/index.html">
 <meta property="og:site_name" content="监护人世界">
-<meta property="og:description" content="一个简单的博客">
+<meta property="og:description" content="2024年10月29日 接着今天凌晨的内容继续写点吧，这几天写的都是之前初始C语言学的，想要把笔记慢慢码到博客上……  正文【初识C语言】 char &#x2F;&#x2F; 字符数据类型short &#x2F;&#x2F; 短整型int &#x2F;&#x2F; 整型long &#x2F;&#x2F; 整型longlong &#x2F;&#x2F; 更长的整型double &#x2F;&amp;#x2F">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-29T13:21:13.000Z">
+<meta property="article:modified_time" content="2024-10-29T15:00:29.116Z">
 <meta property="article:author" content="Henry">
 <meta name="twitter:card" content="summary">
   
@@ -152,130 +154,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-第二篇" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      第二篇
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="archive-article-date">
+
+        
+        <a href="/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="archive-article-date">
   	<time datetime="2024-10-29T13:21:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-10-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/">第二篇</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="2024年10月29日"><a href="#2024年10月29日" class="headerlink" title="2024年10月29日"></a>2024年10月29日</h2><hr>
+<p>接着今天凌晨的内容继续写点吧，这几天写的都是之前初始C语言学的，想要把笔记慢慢码到博客上……</p>
+<hr>
+<h2 id="正文【初识C语言】"><a href="#正文【初识C语言】" class="headerlink" title="正文【初识C语言】"></a>正文【初识C语言】</h2><hr>
+<p>char &#x2F;&#x2F; 字符数据类型<br>short &#x2F;&#x2F; 短整型<br>int &#x2F;&#x2F; 整型<br>long &#x2F;&#x2F; 整型<br>longlong &#x2F;&#x2F; 更长的整型<br>double &#x2F;&#x2F; 双精度浮点型<br>float &#x2F;&#x2F; 单精度浮点型<br>例：double price&#x3D;66.6; 精度高于 float price&#x3D;66.6;</p>
+<p>计算机中的单位 &#x2F;&#x2F; bit、byte、kb、mb、gb、tb、pb……<br>c语言规定： size of (long) &gt;&#x3D;size of (int)</p>
+<hr>
+<p>变量→局部和全局&#x2F;&#x2F; 大概就理解成“{  }”外面是全局，里面是局部变量；【全局变量和局部变量名字相同的情况下，局部优先，建议不要将全局变量和局部变量名字一样】<br>#define _CRT_SECURE_NO_WARNINGS  &#x2F;&#x2F;用的vs2022里面要是不写这一行，下面使用scanf输入函数会报错，输出报错栏里面显示有<br>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    int num1&#x3D;0;<br>    int num2&#x3D;0;<br>    scanf{“%d %d”,&amp;num1,&amp;num2};   &#x2F;&#x2F; scanf输入函数  &amp;取地址符【vs2022里面输入函数“scanf_s”是vs编译器自己提供的输入函数，非标准c提供的函数，其他的编译器认识】<br>    int sum &#x3D; num1+num2;<br>    printf(“%d\n”,sum);<br>    return 0;<br>}<br>&#x2F;&#x2F; 在vs安装路径下有一个文件：newc++file.cpp文件，在vs工程中创建新的c.或cpp文件时，都是拷贝newc++file.cpp这个文件的</p>
+<p>变量的作用域→局部变量&#x2F;全局变量<br>    局部变量：变量所在局部范围<br>    全局变量：作用域是整个工程<br>例：<br>int main()<br>{<br>    {<br>        int a&#x3D;10;<br>        printf(“%d\n”,a);<br>    }<br>    printf(“%d\n”,a);  &#x2F;&#x2F;这一行会报错“未声明的标识符”<br>    return 0；<br>}<br>&#x2F;&#x2F; 声明来自外部的符号“exturn int a&#x3D;0；”（来自编译器中别的文件）</p>
+<p>变量的生命周期→局部变量&#x2F;全局变量<br>局部变量：进入作用域生命周期开始，出作用域生命周期结束。<br>全局变量：整个程序的生命周期。</p>
+<hr>
+<p>常量{“字面常量”“const修饰的常变量”“#define定义的标识符常量”“枚举常量”}<br>&#x2F;&#x2F; 字面常量 例：30；3.14；‘w’；&#x2F;&#x2F;字符”abc”<br>&#x2F;&#x2F;const修饰的常变量  const int a&#x3D;10；&#x2F;&#x2F;a是const修饰，本质是变量，但不能被修改，有常量的属性<br>&#x2F;&#x2F;define修饰的标识符常量<br>例：<br>#define MAX 100   &#x2F;&#x2F;MAX就是被define定义的标识符常量<br>int main()<br>{<br>    printf(“%d\n”,MAX);<br>    int a&#x3D;MAX;<br>    printf(“%d\n”,a);<br>    return 0;<br>}<br>&#x2F;&#x2F;枚举常量   public enum Day {<br>       MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY<br>   }     &#x2F;&#x2F;enum（枚举）</p>
+<hr>
+<p>字符串+转义字符+注释<br>char &#x2F;&#x2F;字符类型  char ch&#x3D;’w’;     注：字符串的结束标志是一个”\0”的转义字符（转变原来字符的意思），计算字符串长度时”\0”是结束标志，不算作字符串内容。<br>char arr1[10]&#x3D;”abcdef”;  &#x2F;&#x2F;七个字符 char[7]<br>char arr2[]&#x3D;{‘a’,’b’,’c’,’d’,’e’,’f’};&#x2F;&#x2F;char[6]<br>printf(“%s\n”,arr1);   &#x2F;&#x2F;输出abcdef<br>printf(“%s\n”,arr2);   &#x2F;&#x2F;输出abcdef烫烫烫烫烫烫abcdef<br>字符串 &#x2F;&#x2F;”“双引号引起来的【C语言中没有字符串类型】<br>&#x2F;&#x2F; “\“转义为一个”&quot;打印，”\0”即输出”\0”<br>&#x2F;&#x2F;strlen();  &#x2F;&#x2F;求字符串长度的库函数，string length→#include&lt;string.h&gt;<br>int main()<br>{<br>    int len &#x3D; strlen(“abc”);<br>    printf(“%d\n”,len);   &#x2F;&#x2F;输出：3<br>    return 0;<br>}<br>%d 打印整型<br>%c 打印字符<br>%s 打印字符串<br>%f 打印float类型的数据<br>%lf 打印double类型的数据<br>%zu 打印size of返回值</p>
+<hr>
+<p>转义字符<br>\a 响铃  007<br>\b 退格  008<br>\f 换页  012<br>\n 换行 010<br>\r 回车  013<br>\t 水平制表  009<br>\v 垂直制表  011<br>\ 反斜杠  092<br>\? 问号字符  063<br>&#39; 单引号字符  039<br>&#39;‘双引号字符  034<br>\0 空字符；结束的标志  000<br>\ddd 任意字符  三位八进制<br>\xdd 任意字符  二位十六进制</p>
+<p>例：<br>printf(“%c\n”,’\130’);  &#x2F;&#x2F;输出：X    八进制130→换算成十进制&#x3D;88  ASCII编码中88→X<br>printf(“%c\n”,’\x60’);  &#x2F;&#x2F;输出：、   十六进制的60→换算成十进制&#x3D;96 ASCII编码中96→、</p>
+<hr>
+<p>注释：&#x2F;&#x2F;……或者”&#x2F;*     <em>&#x2F;“<br>&#x2F;</em> int a&#x3D; 10;<em>&#x2F;     →C语言注释风格，不支持嵌套注释，遇到</em>&#x2F;就结束<br>&#x2F;&#x2F; int a&#x3D;10；&#x2F;&#x2F;   →c++的注释风格</p>
+<hr>
+<p>int *p&#x3D;NULL；&#x2F;&#x2F;创建指针变量p，并赋值为NULL</p>
+<hr>
+<h2 id="没有学markdown语法，编辑这个的格式被搞的好烦，还是要去学一下，嗯要是能够vx两个窗口的编辑的同时就能看见效果就最好了……"><a href="#没有学markdown语法，编辑这个的格式被搞的好烦，还是要去学一下，嗯要是能够vx两个窗口的编辑的同时就能看见效果就最好了……" class="headerlink" title="没有学markdown语法，编辑这个的格式被搞的好烦，还是要去学一下，嗯要是能够vx两个窗口的编辑的同时就能看见效果就最好了……"></a>没有学markdown语法，编辑这个的格式被搞的好烦，还是要去学一下，嗯要是能够vx两个窗口的编辑的同时就能看见效果就最好了……</h2><hr>
+<p>好了，今天就先写这么多吧，去学c语言了，后续有时间慢慢跟进……hhhh初始博客写成这样子也是很无奈的，但还是比较欣慰……</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" class="archive-article-date">
-  	<time datetime="2024-10-28T16:17:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-10-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">真正意义上的第一篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/">真正意义上的第一篇</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2024-10-27T13:47:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/10/27/hello-world/" class="archive-article-date">
-  	<time datetime="2024-10-27T13:33:04.067Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/10/27/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -298,8 +349,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
