@@ -75,6 +75,74 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-第六篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/06/%E7%AC%AC%E5%85%AD%E7%AF%87/" class="article-date">
+  <time class="dt-published" datetime="2024-11-06T12:50:00.000Z" itemprop="datePublished">2024-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/06/%E7%AC%AC%E5%85%AD%E7%AF%87/">第六篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="2024年11月6日"><a href="#2024年11月6日" class="headerlink" title="2024年11月6日"></a>2024年11月6日</h2><p>接着第五篇的关键字，继续记录吧……</p>
+<hr>
+<h2 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h2><p>C语言提供了丰富的关键字,都是语言本身预先设计好的,用户自己不能创造关键字</p>
+<p><img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/%E5%85%B3%E9%94%AE%E8%AF%8D.png" alt="关键词"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">auto</span> <span class="type">int</span> a=<span class="number">10</span>;<span class="comment">//自动变量，被省略的关键字</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> <img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/%E5%85%B3%E9%94%AE%E8%AF%8D%E5%88%86%E7%B1%BB.png" alt="关键词分类"></p>
+<blockquote>
+<p>定义变量名时，不能和关键字重复</p>
+</blockquote>
+<h4 id="变量的命名"><a href="#变量的命名" class="headerlink" title="变量的命名"></a>变量的命名</h4><ul>
+<li>有意义&#x2F;&#x2F;int age;&#x2F;float salary;</li>
+<li>名字必须是字母数字下划线组成，不能有特殊字符，同时不能以数字开头&#x2F;&#x2F;int 2b;&#x2F;&#x2F;err  int _2b;&#x2F;&#x2F;ok</li>
+<li>变量名不能是关键字<br>python里面可以用中文起名字，C语言里面也可以但是不推荐</li>
+</ul>
+<h2 id="关键字typedef"><a href="#关键字typedef" class="headerlink" title="关键字typedef"></a>关键字typedef</h2><p>类型定义，理解为类型重命名</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将unsigned int 重命名为uint_32，所以uint_32也是一个类型名</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">int</span> uint_32;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> date;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;Node;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//观察num1和num2，这两个变量的类型是一样的</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> nm1 = <span class="number">0</span>;</span><br><span class="line">    uint_32 num2 = <span class="number">0</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> <span class="title">n</span>;</span><span class="comment">//Node n2;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="关键词static"><a href="#关键词static" class="headerlink" title="关键词static"></a>关键词static</h2><ul>
+<li>静态的，用来修饰变量和函数的</li>
+<li>修饰局部变量</li>
+<li>修饰全局变量</li>
+<li>秀实函数-称为静态函数<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//修饰局部变量</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">test</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    a++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (i&lt;<span class="number">10</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        test ();</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;<span class="comment">//2 2 2 2 2 2 2 2 2 2 </span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">test</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    a++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (i&lt;<span class="number">10</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        test ();</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;<span class="comment">//2 3 4 5 6 7 8 9 10 11 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">//修饰全局变量</span></span><br><span class="line"><span class="comment">//声明外部符号</span></span><br><span class="line">exturn <span class="type">int</span> ***</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//全局变量具有外部链接属性的；</span></span><br><span class="line">译+链接——可执行程序</span><br><span class="line"></span><br><span class="line"><span class="comment">//static 修饰函数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    ina a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">20</span>;</span><br><span class="line">    <span class="type">int</span> z=add(a,b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,z);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">编</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p> <img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/static%E4%BF%AE%E9%A5%B0%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F.png" alt="static修饰局部变量"></p>
+<p> <img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/exturn%E5%A3%B0%E6%98%8E%E5%A4%96%E9%83%A8%E7%AC%A6%E5%8F%B7.png" alt="exturn声明外部符号"></p>
+<p> <img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/exturn+static.png" alt="exturn+static"></p>
+<p> <img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/static%E4%BF%AE%E9%A5%B0%E5%87%BD%E6%95%B0+exturn.png" alt="static修饰函数+exturn"></p>
+<h2 id="关键词register"><a href="#关键词register" class="headerlink" title="关键词register"></a>关键词register</h2><ul>
+<li>register - 寄存器<br> <img src="/images/%E7%AC%AC%E5%85%AD%E7%AF%87/register%E5%8F%98%E9%87%8F.png" alt="register变量"><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//寄存器变量</span></span><br><span class="line">    <span class="keyword">register</span> <span class="type">int</span> num =<span class="number">3</span>;<span class="comment">//建议：3存放在寄存中</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h6 id="今天就先这么多吧，还有-define定义常量和宏-然后就是指针了……，听cxy说学完指针就可以去刷题了hhhh，今天量有点多，昨天学的md语法先搁置一下吧，明天再看xixi。"><a href="#今天就先这么多吧，还有-define定义常量和宏-然后就是指针了……，听cxy说学完指针就可以去刷题了hhhh，今天量有点多，昨天学的md语法先搁置一下吧，明天再看xixi。" class="headerlink" title="今天就先这么多吧，还有#define定义常量和宏&#x2F;然后就是指针了……，听cxy说学完指针就可以去刷题了hhhh，今天量有点多，昨天学的md语法先搁置一下吧，明天再看xixi。"></a>今天就先这么多吧，还有#define定义常量和宏&#x2F;然后就是指针了……，听cxy说学完指针就可以去刷题了hhhh，今天量有点多，昨天学的md语法先搁置一下吧，明天再看xixi。</h6>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/06/%E7%AC%AC%E5%85%AD%E7%AF%87/" data-id="cm3611hkd0007q0z32al43l4o" data-title="第六篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-md的一点语法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/11/05/md%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%AD%E6%B3%95/" class="article-date">
@@ -189,7 +257,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/05/md%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%AD%E6%B3%95/" data-id="cm34oghl50001i8z35e3g8j67" data-title="md的一点语法" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/05/md%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%AD%E6%B3%95/" data-id="cm3611hk60000q0z37ich8ihe" data-title="md的一点语法" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -243,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/05/%E8%80%81%E5%B9%B4%E4%BA%BA%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/" data-id="cm34oghl90007i8z3bnhoepc0" data-title="老年人健康管理系统的相关资料" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/05/%E8%80%81%E5%B9%B4%E4%BA%BA%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/" data-id="cm3611hkc0006q0z3dk2x6cov" data-title="老年人健康管理系统的相关资料" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -336,15 +404,12 @@
 </ul>
 <h2 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h2><p>C语言提供了丰富的关键字,都是语言本身预先设计好的,用户自己不能创造关键字</p>
 <p><img src="/images/%E5%85%B3%E9%94%AE%E8%AF%8D.png" alt="关键词"></p>
-<p>&#96;&#96;</p>
-<ul>
-<li><input disabled="" type="checkbox"> a</li>
-</ul>
-
+<hr>
+<h5 id="这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……"><a href="#这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……" class="headerlink" title="这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……"></a>这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……</h5>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/03/%E7%AC%AC%E4%BA%94%E7%AF%87/" data-id="cm34oghl90008i8z31ddt43xb" data-title="第五篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/03/%E7%AC%AC%E4%BA%94%E7%AF%87/" data-id="cm3611hke0009q0z3cn4d3uzk" data-title="第五篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -414,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/" data-id="cm34oghlb0009i8z380gahdr7" data-title="第四篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/" data-id="cm3611hke000aq0z39ngb1deg" data-title="第四篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -457,7 +522,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/31/%E5%85%B3%E4%BA%8E%E6%88%91%E5%AF%B9%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A2%86%E5%9F%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%AE%A4%E8%AF%86/" data-id="cm34oghl60002i8z3ghq0e352" data-title="关于我对计算机领域的一点认识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/31/%E5%85%B3%E4%BA%8E%E6%88%91%E5%AF%B9%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A2%86%E5%9F%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%AE%A4%E8%AF%86/" data-id="cm3611hka0002q0z33rk88ok3" data-title="关于我对计算机领域的一点认识" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -517,7 +582,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/" data-id="cm34oghl80005i8z37dzh9ir6" data-title="第三篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/" data-id="cm3611hkb0004q0z319l97eqd" data-title="第三篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -632,7 +697,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cm34oghl80006i8z31kj30xe5" data-title="第二篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cm3611hkc0005q0z3hmcna7bh" data-title="第二篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -685,7 +750,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cm34oghl70003i8z34hi79sfg" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cm3611hkb0003q0z30pncewn8" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -727,58 +792,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cm34oghl80004i8z34ci80bkc" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/10/27/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-10-27T13:33:04.067Z" itemprop="datePublished">2024-10-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/27/hello-world/" data-id="cm34oghl20000i8z3c8ru3kwz" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cm3611hkd0008q0z314jx9s4e" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -791,6 +805,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -821,6 +840,10 @@
       <ul>
         
           <li>
+            <a href="/2024/11/06/%E7%AC%AC%E5%85%AD%E7%AF%87/">第六篇</a>
+          </li>
+        
+          <li>
             <a href="/2024/11/05/md%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%AD%E6%B3%95/">md的一点语法</a>
           </li>
         
@@ -834,10 +857,6 @@
         
           <li>
             <a href="/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/">第四篇</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/31/%E5%85%B3%E4%BA%8E%E6%88%91%E5%AF%B9%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A2%86%E5%9F%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%AE%A4%E8%AF%86/">关于我对计算机领域的一点认识</a>
           </li>
         
       </ul>
