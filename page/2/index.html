@@ -75,6 +75,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-真正意义上的第一篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" class="article-date">
+  <time class="dt-published" datetime="2024-10-28T16:17:19.000Z" itemprop="datePublished">2024-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/">真正意义上的第一篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="2024年10月29日"><a href="#2024年10月29日" class="headerlink" title="2024年10月29日"></a>2024年10月29日</h2><pre><code>在bilibili学 c语言的时候，看见up主提到了写博客，去了解了一下，想着自己也来试着写写，但又不知道写些啥，昨天搭建好了hexo博客，那么今天就先从写自己的笔记开始吧！“真正意义上的第一篇”
+可能看上去很无聊，但是我确实是要把之前的笔记上传到这里，也就是一些刚开始学习c语言时候写的笔记，嗯是这样……
+</code></pre>
+<hr>
+<h2 id="正文【初始C语言】"><a href="#正文【初始C语言】" class="headerlink" title="正文【初始C语言】"></a>正文【初始C语言】</h2><p>计算机语言的发展是一个由低级向高级演变的过程，二进制指令→汇编指令（助记符）→B语言→C语言（高级语言）<br>C语言国际标准ANSI （ANSI，全称 American National Standard Institute）C<br>编译器主要有Clong&#x2F;GCC&#x2F;WIN-TC&#x2F;MSVC&#x2F;Turboc     c++是一门编译型语言<br>test.c文件→编译→链接→test.exe文件      .c源文件（注意后缀）如果是.c++，编译器会按照c++语法来编译代码，在后来的实操中确实有一次忘记修改，然后报错了，但是个人感觉还是蛮罕见的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>    <span class="comment">//标准输入输出头文件，#include &lt;stdio.h&gt; 是预处理器指令，告诉 C 编译器在实际编译之前要包含 stdio.h 文件。</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>           <span class="comment">//C 语言中一定要有 main 函数，main 函数是程序的入口，有且仅有一个，程序从这里开始执行。</span></span><br><span class="line"><span class="comment">//有些教材中也会有 int main(void)→这里的 void 就是明确没有参数</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);     <span class="comment">//printf 是库函数，专门用来打印数据，会在屏幕上显示&quot;Hello World&quot;。</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">//试了别的数字，一样可以运行，返回的是 0，对应一开头的 int 。试过用字母，定义了 int z = 0;return z; 如果没有这一行，程序会运行不了，不过在 vs 中没有这一行也可以运行，因为编译器编译的时候加上了这一行……</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面应该就是每个人初始C语言敲出来的第一份代码吧~</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>   <span class="comment">// 头文件通常在程序的开头使用 #include 指令包含。头文件提供了函数和库的声明，如标准输入输出库 &lt;stdio.h&gt;、标准库 &lt;stdlib.h&gt; 等。它们定义了函数、宏、常量等使程序能够使用预定义的库函数。</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159    <span class="comment">// 宏是通过 #define 指令定义的符号常量或代码片段。宏在编译前由预处理器替换为其定义的内容。常用于定义常量或者复杂的代码块。</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明:在 C 语言中，函数的声明必须在函数定义或调用之前。声明提供了函数的返回类型、函数名和参数列表，以便编译器知道如何调用该函数。</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;         <span class="comment">// main() 函数是 C 程序的入口点，每个 C 程序都必须包含一个 main() 函数。程序从 main() 开始执行，返回值通常为 0 表示程序成功执行。</span></span><br><span class="line">    <span class="comment">// 变量声明:在 C 程序中，所有变量必须在使用前声明。变量可以在 main() 函数中声明，也可以在其他函数中或全局声明。</span></span><br><span class="line">    <span class="type">int</span> num1, num2, sum;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Enter two integers: &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;num1, &amp;num2);<span class="comment">// 用户输入</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 函数调用</span></span><br><span class="line">    sum = add(num1, num2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出结果</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Sum: %d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;        <span class="comment">// 返回 0 表示程序成功执行</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义:包含实际的函数体，它描述了函数的具体实现。函数通常包含参数、局部变量和返回值</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><p>标识符是程序中变量、函数、数组等的名字。标识符由字母（大写或小写）、数字和下划线组成，但第一个字符必须是字母或下划线，不能是数字。</p>
+<p>一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9）。</p>
+<p>C 标识符内不允许出现标点字符，比如 @、$ 和 %。C 是<code>区分大小写</code>的编程语言。因此在 C 中，Manpower 和 manpower 是两个不同的标识符。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mohd       zara    abc   move_name  a_123</span><br><span class="line">myname50   _temp   j     a23b9      retVal</span><br></pre></td></tr></table></figure>
+
+<p>vs2022运行的时候是 ctrl+f5，不如dev c++的f11来得方便，但是dev c++里面中文会识别成乱码，问了gpt还是没有搞好，蠢了点……</p>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>就先写这么多吧，困觉了……2024.10.29   00：47</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cm4a1cjjt000428z30eo91yu2" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-我的第一篇博客文章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="article-date">
+  <time class="dt-published" datetime="2024-10-27T13:47:48.000Z" itemprop="datePublished">2024-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+<hr>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cm4a1cjjt000328z34s3t627e" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/27/hello-world/" class="article-date">
@@ -114,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/27/hello-world/" data-id="cm3611hk90001q0z37as15waz" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/27/hello-world/" data-id="cm4a1cjjo000028z34hos2t3d" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -149,7 +246,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
     </div>
   </div>
 
@@ -162,6 +259,14 @@
       <ul>
         
           <li>
+            <a href="/2024/12/04/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">随便写点</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/18/%E7%AC%AC%E4%B8%83%E7%AF%87/">第七篇</a>
+          </li>
+        
+          <li>
             <a href="/2024/11/06/%E7%AC%AC%E5%85%AD%E7%AF%87/">第六篇</a>
           </li>
         
@@ -171,14 +276,6 @@
         
           <li>
             <a href="/2024/11/05/%E8%80%81%E5%B9%B4%E4%BA%BA%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">老年人健康管理系统的相关资料</a>
-          </li>
-        
-          <li>
-            <a href="/2024/11/03/%E7%AC%AC%E4%BA%94%E7%AF%87/">第五篇</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/">第四篇</a>
           </li>
         
       </ul>
