@@ -75,6 +75,122 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-第二篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="article-date">
+  <time class="dt-published" datetime="2024-10-29T13:21:13.000Z" itemprop="datePublished">2024-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/">第二篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="2024年10月29日"><a href="#2024年10月29日" class="headerlink" title="2024年10月29日"></a>2024年10月29日</h2><pre><code>接着今天凌晨的内容继续写点吧，这几天写的都是之前初始 C 语言学的，想要把笔记慢慢码到博客上……
+</code></pre>
+<hr>
+<h2 id="正文【初识C语言】"><a href="#正文【初识C语言】" class="headerlink" title="正文【初识C语言】"></a>正文【初识C语言】</h2><ul>
+<li><code>char</code> &#x2F;&#x2F; 字符数据类型</li>
+<li><code>short</code> &#x2F;&#x2F; 短整型</li>
+<li><code>int</code> &#x2F;&#x2F; 整型</li>
+<li><code>long</code> &#x2F;&#x2F; 整型</li>
+<li><code>long long</code> &#x2F;&#x2F; 更长的整型</li>
+<li><code>double</code> &#x2F;&#x2F; 双精度浮点型</li>
+<li><code>float</code> &#x2F;&#x2F; 单精度浮点型</li>
+</ul>
+<p>double price &#x3D; 66.6; &#x2F;&#x2F; 精度高于 float price &#x3D; 66.6;</p>
+<p>计算机中的单位 &#x2F;&#x2F; bit、byte、kb、mb、gb、tb、pb…… C 语言规定：size of (long) &gt;&#x3D; size of (int)</p>
+<hr>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li><code>局部和全局</code>：大概理解成{ }全局是全局，内部是局部变量；全局变量和局部变量名称相同的情况下，局部优先，建议不要将全局变量和局部变量名称一样。<br>变量范围</li>
+<li><code>局部变量</code>：变量所在局部范围</li>
+<li><code>全局变量</code>：作用范围是整个工程<br><strong>例</strong>：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS <span class="comment">// 用的 VS2022 里面要是不写这一行，下面使用 scanf 输入函数会报错</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;num1, &amp;num2); <span class="comment">// scanf 输入函数 &amp; 取地址符</span></span><br><span class="line">	<span class="type">int</span> sum = num1 + num2;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 在 VS 安装路径下有一个文件：newc++file.cpp 文件，在 VS 工程中创建新的 c 或 cpp 文件时，都是拷贝 newc++file.cpp 这个文件的。</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"> &#123;</span><br><span class="line">	&#123;</span><br><span class="line">        	<span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">        	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a); <span class="comment">// 这一行会报错“未声明的标识符”</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 声明来自外部的符号“extern int a = 0；”（来自编译器中别的文件）</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+变量的生命周期</li>
+<li><code>局部变量</code>：进入作用域生命周期开始，出作用域生命周期结束。</li>
+<li><code>全局变量</code>：整个项目的生命周期。</li>
+</ul>
+<hr>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ul>
+<li><code>字面常量</code>：例30；3.14；’w’；字符串”abc”</li>
+<li><code>const修饰的常量变量</code>：const int a &#x3D; 10;（本质上是变量，但不能被修改）</li>
+<li><code>#define定义的标识符常量</code>：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 100 <span class="comment">// MAX 就是被 define 定义的标识符常量</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, MAX);</span><br><span class="line">	<span class="type">int</span> a = MAX;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 枚举常量</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Day</span> &#123;</span></span><br><span class="line">    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</span><br><span class="line">&#125;; <span class="comment">// enum（枚举）</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符串-转义字符-注释"><a href="#字符串-转义字符-注释" class="headerlink" title="字符串 + 转义字符 + 注释"></a>字符串 + 转义字符 + 注释</h2><ul>
+<li><code>字符类型</code>：char ch &#x3D; ‘w’;</li>
+<li>注：字符串的结束标志是一个”\0”转义字符（原来字符的意思），计算字符串长度时”\0”是结束标志，不算作字符串内容。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> arr1[<span class="number">10</span>] = <span class="string">&quot;abcdef&quot;</span>; <span class="comment">// 七个字符 char[7]</span></span><br><span class="line"><span class="type">char</span> arr2[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>&#125;; <span class="comment">// char[6]</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, arr1); <span class="comment">// 输出 abcdef</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, arr2); <span class="comment">// 输出 abcdef</span></span><br></pre></td></tr></table></figure>
+字符串 &#x2F;&#x2F; “”双引号引起来的【C 语言中没有字符串类型】</li>
+<li>“\“转义为一个”\“打印，”\0”即输出”\0”</li>
+<li>strlen();&#x2F;&#x2F; 求字符串长度的库函数，字符串长度 →#include&lt;string.h&gt;<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, len); <span class="comment">// 输出：3</span></span><br><span class="line">    	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>%d</code> 打印整型</li>
+<li><code>%c</code> 打印字符</li>
+<li><code>%s</code> 打印结构</li>
+<li><code>%f</code> 打印 float 版本数据</li>
+<li><code>%lf</code> 打印双份样本数据</li>
+<li><code>%zu</code> 返回值的打印大小</li>
+</ul>
+<hr>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\a 响铃  <span class="number">007</span></span><br><span class="line">\b 退格  <span class="number">008</span></span><br><span class="line">\f 换页  <span class="number">012</span></span><br><span class="line">\n 换行  <span class="number">010</span></span><br><span class="line">\r 回车  <span class="number">013</span></span><br><span class="line">\t 水平制表  <span class="number">009</span></span><br><span class="line">\v 垂直制表  <span class="number">011</span></span><br><span class="line">\\ 反斜杠  <span class="number">092</span></span><br><span class="line">\? 问号字符  <span class="number">063</span></span><br><span class="line">\<span class="string">&#x27; 单引号字符  039</span></span><br><span class="line"><span class="string">\&quot; 双引号字符  034</span></span><br><span class="line"><span class="string">\0 空字符；结束的标志  000</span></span><br><span class="line"><span class="string">\ddd 任意字符（三位八进制）</span></span><br><span class="line"><span class="string">\xdd 任意字符（二位十六进制）</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>例</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>, <span class="string">&#x27;\130&#x27;</span>); <span class="comment">// 输出：X 八进制130→换算成十进制=88 ASCII编码中88→X</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>, <span class="string">&#x27;\x60&#x27;</span>); <span class="comment">// 输出：` 十六进制的60→换算成十进制=96 ASCII编码中96→`</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>&#x2F;&#x2F;……或&#x2F;*     *&#x2F;<br>例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* int a = 10; */</span> <span class="comment">// C 语言注释风格，不支持嵌套注释，遇到 */ 就结束</span></span><br><span class="line"><span class="comment">// int a = 10; // C++ 的注释风格</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>运算符用于执行各种操作，如算术运算、逻辑运算、比较运算等。</p>
+<p>C 语言中的运算符种类繁多，常见的包括：</p>
+<ul>
+<li>算术运算符：<code>+, -, *, /, %</code></li>
+<li>关系运算符：<code>==, !=, &gt;, &lt;, &gt;=, &lt;=</code></li>
+<li>逻辑运算符：<code>&amp;&amp;, ||, !</code></li>
+<li>赋值运算符：<code>=, +=, -=, *=, /=, %=</code></li>
+<li>其他运算符：<code>sizeof, ?:, &amp;, *, -&gt;, .</code><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">5</span>, b = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> sum = a + b;  <span class="comment">// 使用算术运算符 +</span></span><br><span class="line"><span class="type">int</span> isEqual = (a == b);  <span class="comment">// 使用关系运算符 ==</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><p>下表列出了 C 中的保留字。这些保留字不能作为常量名、变量名或其他标识符名称。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">`<span class="keyword">auto</span>`	声明自动变量</span><br><span class="line"></span><br><span class="line">`<span class="keyword">break</span>`	跳出当前循环</span><br><span class="line"></span><br><span class="line">`<span class="keyword">case</span>`	开关语句分支</span><br><span class="line"></span><br><span class="line">`<span class="type">char</span>`	声明字符型变量或函数返回值类型</span><br><span class="line"></span><br><span class="line">`<span class="type">const</span>`	定义常量，如果一个变量被 <span class="type">const</span> 修饰，那么</span><br><span class="line">它的值就不能再被改变</span><br><span class="line"></span><br><span class="line">`<span class="keyword">continue</span>`	结束当前循环，开始下一轮循环</span><br><span class="line"></span><br><span class="line">`<span class="keyword">default</span>`	开关语句中的<span class="string">&quot;其它&quot;</span>分支</span><br><span class="line"></span><br><span class="line">`<span class="keyword">do</span>`	循环语句的循环体</span><br><span class="line"></span><br><span class="line">`<span class="type">double</span>`	声明双精度浮点型变量或函数返回值类型</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">`<span class="keyword">else</span>`	条件语句否定分支（与 <span class="keyword">if</span> 连用）</span><br><span class="line"></span><br><span class="line">`<span class="keyword">enum</span>`	声明枚举类型</span><br><span class="line"></span><br><span class="line">`<span class="keyword">extern</span>`	声明变量或函数是在其它文件或本文件的其</span><br><span class="line">他位置定义</span><br><span class="line"></span><br><span class="line">`<span class="type">float</span>`	声明浮点型变量或函数返回值类型</span><br><span class="line"></span><br><span class="line">`<span class="keyword">for</span>`	一种循环语句</span><br><span class="line"></span><br><span class="line">`<span class="keyword">goto</span>`	无条件跳转语句</span><br><span class="line"></span><br><span class="line">`<span class="keyword">if</span>`	条件语句</span><br><span class="line"></span><br><span class="line">`<span class="type">int</span>`	声明整型变量或函数</span><br><span class="line"></span><br><span class="line">`<span class="type">long</span>`	声明长整型变量或函数返回值类型</span><br><span class="line"></span><br><span class="line">`<span class="keyword">register</span>`	声明寄存器变量</span><br><span class="line"></span><br><span class="line">`<span class="keyword">return</span>`	子程序返回语句（可以带参数，也可不带参</span><br><span class="line">数）</span><br><span class="line"></span><br><span class="line">`<span class="type">short</span>`	声明短整型变量或函数</span><br><span class="line"></span><br><span class="line">`<span class="type">signed</span>`	声明有符号类型变量或函数</span><br><span class="line"></span><br><span class="line">`<span class="keyword">sizeof</span>`	计算数据类型或变量长度（即所占字节数）</span><br><span class="line"></span><br><span class="line">`<span class="type">static</span>`	声明静态变量</span><br><span class="line"></span><br><span class="line">`<span class="keyword">struct</span>`	声明结构体类型</span><br><span class="line"></span><br><span class="line">`<span class="keyword">switch</span>`	用于开关语句</span><br><span class="line"></span><br><span class="line">`<span class="keyword">typedef</span>`	用以给数据类型取别名</span><br><span class="line"></span><br><span class="line">`<span class="type">unsigned</span>`	声明无符号类型变量或函数</span><br><span class="line"></span><br><span class="line">`<span class="keyword">union</span>`	声明共用体类型</span><br><span class="line"></span><br><span class="line">`<span class="type">void</span>`	声明函数无返回值或无参数，声明无类型指针</span><br><span class="line"></span><br><span class="line">`<span class="keyword">volatile</span>`	说明变量在程序执行中可被隐含地改变</span><br><span class="line"></span><br><span class="line">`<span class="keyword">while</span>`	循环语句的循环条件</span><br><span class="line"><span class="comment">//C99 新增关键字</span></span><br><span class="line"><span class="type">_Bool</span>	<span class="type">_Complex</span>	<span class="type">_Imaginary</span>	<span class="keyword">inline</span>	<span class="keyword">restrict</span></span><br><span class="line"><span class="comment">//C11 新增关键字</span></span><br><span class="line"><span class="keyword">_Alignas</span>	<span class="keyword">_Alignof</span>	<span class="keyword">_Atomic</span>	<span class="keyword">_Generic</span>	<span class="keyword">_Noreturn</span></span><br><span class="line"><span class="keyword">_Static_assert</span>	<span class="keyword">_Thread_local</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="C-中的空格"><a href="#C-中的空格" class="headerlink" title="C 中的空格"></a>C 中的空格</h2><p>空格用于描述空白符、制表符、换行符和注释。只包含空格的行，被称为空白行，可能带有注释，C 编译器会完全忽略它。</p>
+<p>空格分隔语句的各个部分，让编译器能识别语句中的某个元素（比如 int）在哪里结束，下一个元素在哪里开始。</p>
+<hr>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="literal">NULL</span>; <span class="comment">// 创建指针变量 p，并赋值为 NULL</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cm4a1cjju000628z3ezzl0uap" data-title="第二篇" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-真正意义上的第一篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" class="article-date">
@@ -246,7 +362,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">September 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">December 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
     </div>
   </div>
 
@@ -257,6 +373,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2025/09/21/%E9%87%8D%E8%BF%94%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">重返我的博客</a>
+          </li>
         
           <li>
             <a href="/2024/12/04/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">随便写点</a>
@@ -274,10 +394,6 @@
             <a href="/2024/11/05/md%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%AD%E6%B3%95/">md的一点语法</a>
           </li>
         
-          <li>
-            <a href="/2024/11/05/%E8%80%81%E5%B9%B4%E4%BA%BA%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">老年人健康管理系统的相关资料</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -291,7 +407,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2024 Henry<br>
+      &copy; 2025 Henry<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
