@@ -75,6 +75,68 @@
      <div class="outer">
       <section id="main">
   
+    <article id="post-第三篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/" class="article-date">
+  <time class="dt-published" datetime="2024-10-30T12:59:16.000Z" itemprop="datePublished">2024-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/">第三篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="2024年10月30日"><a href="#2024年10月30日" class="headerlink" title="2024年10月30日"></a>2024年10月30日</h2><pre><code>今天在网上稍微了解了关于如何用markdown编辑文档，让我的博客外观变得`能看`了些……
+已经有两天没有学习C语言了，等我把这篇博客码好，要开始新的学习了hhh~
+</code></pre>
+<hr>
+<h2 id="正文【初识C语言】"><a href="#正文【初识C语言】" class="headerlink" title="正文【初识C语言】"></a>正文【初识C语言】</h2><p>C语言是<code>结构化</code>的程序设计语言<code>顺序结构``选择结构``循环结构</code></p>
+<h2 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h2><p>C语言实现选择</p>
+<ul>
+<li><code>if else</code>语句</li>
+<li><code>switch</code>语句</li>
+</ul>
+<p><strong>例</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> input = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;要好好学习吗(1/0)?&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;input);</span><br><span class="line">	<span class="keyword">if</span> (input==<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;好offer&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;卖红薯&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><ul>
+<li><code>while</code>语句</li>
+<li><code>for</code>语句</li>
+<li><code>do while</code>语句<br><strong>例</strong>:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> line=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;学习&quot;</span>);</span><br><span class="line">	<span class="keyword">while</span>(line&lt;<span class="number">20000</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;写代码:%d\n&quot;</span>,line);</span><br><span class="line">		line ++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (line&gt;=<span class="number">20000</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;好offer\n&quot;</span>)；</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;继续加油\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="函数-数组"><a href="#函数-数组" class="headerlink" title="函数&#x2F;数组"></a>函数&#x2F;数组</h2><p><strong>例</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sub</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span>		<span class="comment">//`int`返回参数	`sub`函数名	`(int x,int y)`函数参数</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> z = <span class="number">0</span>;</span><br><span class="line">	z = x + y;</span><br><span class="line">	<span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">	scanf_s(<span class="string">&quot;%d %d&quot;</span>,&amp;num1, &amp;num2);</span><br><span class="line">	<span class="type">int</span> sum = sub(num1, num2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;	<span class="comment">//数组有序号的，数组的下标从0开始</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,arr[<span class="number">8</span>]);</span><br><span class="line">	<span class="type">int</span> i =<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (i&lt;<span class="number">10</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,arr[i]);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://henryjhr666.github.io/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/" data-id="cmftwgpw200074wz376o41zb7" data-title="第三篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-第二篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="article-date">
@@ -179,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cmftvchk80007eoz366vtatnz" data-title="第二篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cmftwgpw100054wz35zhw43ym" data-title="第二篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -234,7 +296,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cmftvchk60003eoz3bs6rawly" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cmftwgpw400084wz3a9udf8kb" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -276,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cmftvchk40001eoz39508bz6w" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cmftwgpvy00024wz3ak6b9pyn" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -327,7 +389,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/27/hello-world/" data-id="cmftvchk10000eoz33f8uhmh3" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/27/hello-world/" data-id="cmftwgpvz00034wz328dc578q" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -375,6 +437,10 @@
       <ul>
         
           <li>
+            <a href="/2025/09/22/%E7%B4%AF/">有点累</a>
+          </li>
+        
+          <li>
             <a href="/2025/09/21/%E9%87%8D%E8%BF%94%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">重返我的博客</a>
           </li>
         
@@ -388,10 +454,6 @@
         
           <li>
             <a href="/2024/11/06/%E7%AC%AC%E5%85%AD%E7%AF%87/">第六篇</a>
-          </li>
-        
-          <li>
-            <a href="/2024/11/05/md%E7%9A%84%E4%B8%80%E7%82%B9%E8%AF%AD%E6%B3%95/">md的一点语法</a>
           </li>
         
       </ul>
