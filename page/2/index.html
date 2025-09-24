@@ -75,6 +75,106 @@
      <div class="outer">
       <section id="main">
   
+    <article id="post-第五篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/03/%E7%AC%AC%E4%BA%94%E7%AF%87/" class="article-date">
+  <time class="dt-published" datetime="2024-11-03T15:43:50.000Z" itemprop="datePublished">2024-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/03/%E7%AC%AC%E4%BA%94%E7%AF%87/">第五篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="2024年11月3日"><a href="#2024年11月3日" class="headerlink" title="2024年11月3日"></a>2024年11月3日</h2><pre><code>c语言是非常灵活的
+
+C语言提供了非常丰富的操作符，使得使用起来比较灵活
+</code></pre>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><ul>
+<li>算术操作符<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">7</span>/<span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">7</span>%<span class="number">2</span>;<span class="comment">//取模</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,b);</span><br><span class="line">    <span class="comment">//除号的两端都是整数的时候，执行的是整数除法，如果两端只要有一个浮点数，就执行浮点数的除法</span></span><br><span class="line">    <span class="type">float</span> c=<span class="number">7</span>/<span class="number">2.0</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">7</span>%<span class="number">2</span>;<span class="comment">//取模操作符的两个操作符只能是整数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;&amp;.f&quot;</span>,c);<span class="comment">//%.f小数点后可以加数组，表示小数点后几位，%.2f</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>移位操作符(涉及二进制的运算)</li>
+</ul>
+<p>右移操作符 <code>&gt;&gt;</code></p>
+<p>左移操作符 <code>&lt;&lt;</code></p>
+<ul>
+<li><p>位操作符<br><code>&amp;</code><br><code>^</code><br><code>|</code></p>
+</li>
+<li><p>赋值操作符<br><code>=</code><br><code>+=</code><br><code>-=</code><br><code>*=</code><br><code>/=</code><br>……</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">0</span>；<span class="comment">//初始化</span></span><br><span class="line">    a=<span class="number">20</span>;<span class="comment">//赋值</span></span><br><span class="line"></span><br><span class="line">    a=a+<span class="number">3</span>;<span class="comment">//</span></span><br><span class="line">    a += <span class="number">3</span>;</span><br><span class="line">    a -+<span class="number">3</span>;<span class="comment">//a=a-3</span></span><br><span class="line">    ……</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>单目操作符</p>
+</li>
+</ul>
+<p>a+b;</p>
+<p> ‘+’&#x2F;&#x2F;双目操作符</p>
+<p>单目操作符——只有一个操作数的操作符</p>
+<p><code>!</code>逻辑反操作</p>
+<p><code>-</code>负值</p>
+<p><code>+</code>正值</p>
+<p><code>&amp;</code>取地址</p>
+<p><code>sizeof</code>操作数的类型长度（以字节为单位）</p>
+<p><code>~</code>对一个数的二级制按位取反</p>
+<p><code>++</code>前置，后置++</p>
+<p><code>--</code>前置，后置–</p>
+<p><code>*</code>间接访问操作符（解引用操作符）</p>
+<p><code>类型</code>强制类型转换</p>
+<p><strong>例</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">逻辑反操作<span class="comment">//C语言中，0表示假，非0表示真</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(!flag)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;hehe\n&quot;</span>);<span class="comment">//输出“hehe”，若flag=非0，则什么都不输出</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b=-a;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,b);<span class="comment">//输出-10</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//sizeof是操作符，是单目操作符</span></span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(a));<span class="comment">//4,int，整型变量占四个字节</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(<span class="type">int</span>));<span class="comment">//4</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span> a );<span class="comment">//4，不用加括号，证明了sizeof是操作符，不是函数</span></span><br><span class="line">    <span class="type">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(arr));<span class="comment">//40,计算的是整个数组的大小，单位是字节 </span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]));<span class="comment">//4</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span> (arr[<span class="number">0</span>]));<span class="comment">//10——数组的元素个数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b=a++;<span class="comment">//后置++,先使用，后++//b=a,a=a+1</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);<span class="comment">//11</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,b);<span class="comment">//10</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b=++a;<span class="comment">//前置++,先++，后使用//a=a+1,b=a</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);<span class="comment">//11</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,b);<span class="comment">//11</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//&#x27;--&#x27;同理</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> a=<span class="number">3.14</span>;<span class="comment">//字面浮点数，编译器默认理解成double类型</span></span><br><span class="line">    <span class="type">int</span> a=(<span class="type">int</span>)<span class="number">3.14</span>;<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ；</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>关系操作符</li>
+</ul>
+<p><code>&gt;</code></p>
+<p><code>&gt;=</code></p>
+<p><code>&lt;</code></p>
+<p><code>&lt;=</code></p>
+<p><code>!=</code>用于测试不相等</p>
+<p><code>==</code> 用于测试相等</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">if</span> (a=<span class="number">3</span>);</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;hehe\n&quot;</span>);<span class="comment">//hehe;if (a==3),则不输出</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>逻辑操作符</li>
+</ul>
+<p><code>&amp;&amp;</code>逻辑与</p>
+<p><code>||</code>逻辑或</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//&amp;&amp;逻辑与-并且;</span></span><br><span class="line">    <span class="comment">//||逻辑或-或者</span></span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b =<span class="number">20</span>;</span><br><span class="line">    <span class="keyword">if</span> (a &amp;&amp; b);</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;hehe\n&quot;</span>)<span class="comment">//hehe;如果a=0;为假,则不输出</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//&#x27;||&#x27;同理</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>条件操作符(三目操作符)</li>
+</ul>
+<p><code>esp1 ? esp2 : esp3</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">20</span>;</span><br><span class="line">    <span class="type">int</span> r=a &gt; b ? a : b </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,r);<span class="comment">//20</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> a=<span class="number">100</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">20</span>;</span><br><span class="line">    <span class="type">int</span> r=a &gt; b ? a : b </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,r);<span class="comment">//100</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>逗号表达式<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逗号表达式就是逗号隔开的一串表达式</span></span><br><span class="line"><span class="comment">//特点是:从左向右依次计算,整个表达式的结果是最后一个表达式的结果</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">20</span>;</span><br><span class="line">    <span class="type">int</span> c=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//      c=8   a=28  5</span></span><br><span class="line">    <span class="type">int</span> d=(c=a<span class="number">-2</span>,a=b+c,c<span class="number">-3</span>);<span class="comment">//5(最后一个表达式的值)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>下标引用\函数调用\结构成员操作符<br><code>[] () . -&gt;</code><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">下标引用操作符</span><br><span class="line"><span class="type">int</span> <span class="title function_">man</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line">    arr[<span class="number">3</span>] =<span class="number">20</span>;<span class="comment">//[]就是下标引用操作符   arr和3就是[]的操作数</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">函数调用操作符</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sub</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> x+y ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">	scanf_s(<span class="string">&quot;%d %d&quot;</span>,&amp;num1, &amp;num2);</span><br><span class="line">	<span class="type">int</span> sum = sub(num1, num2);<span class="comment">//()就是函数调用操作符,sub,num1,num2都是()的操作数</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h2><p>C语言提供了丰富的关键字,都是语言本身预先设计好的,用户自己不能创造关键字</p>
+<p><img src="/images/%E5%85%B3%E9%94%AE%E8%AF%8D.png" alt="关键词"></p>
+<hr>
+<h5 id="这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……"><a href="#这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……" class="headerlink" title="这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……"></a>这一篇已经持续了两三天，期间还写了“md的一点语法”，所以我决定另起一篇，内容上还接着这篇来写……</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://henryjhr666.github.io/2024/11/03/%E7%AC%AC%E4%BA%94%E7%AF%87/" data-id="cmfy1wevu0006ykz34qcxd2v6" data-title="第五篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-第四篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/" class="article-date">
@@ -137,7 +237,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/" data-id="cmfxqjnm0000cy8z30o3d90u9" data-title="第四篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/31/%E7%AC%AC%E5%9B%9B%E7%AF%87/" data-id="cmfy1wevv0009ykz33iw30add" data-title="第四篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -185,7 +285,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/31/%E5%85%B3%E4%BA%8E%E6%88%91%E5%AF%B9%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A2%86%E5%9F%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%AE%A4%E8%AF%86/" data-id="cmfxqjnlw0004y8z33ito1fob" data-title="关于我对计算机领域的一点认识" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/31/%E5%85%B3%E4%BA%8E%E6%88%91%E5%AF%B9%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A2%86%E5%9F%9F%E7%9A%84%E4%B8%80%E7%82%B9%E8%AE%A4%E8%AF%86/" data-id="cmfy1wevs0002ykz331ev4wir" data-title="关于我对计算机领域的一点认识" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -247,7 +347,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/" data-id="cmfxqjnlx0005y8z3djdcg391" data-title="第三篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/30/%E7%AC%AC%E4%B8%89%E7%AF%87/" data-id="cmfy1wevt0004ykz34vj56nix" data-title="第三篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -363,7 +463,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cmfxqjnlx0006y8z37rlbhz4b" data-title="第二篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%AC%AC%E4%BA%8C%E7%AF%87/" data-id="cmfy1wevt0005ykz3ay0ie4ji" data-title="第二篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -418,7 +518,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cmfxqjnly0008y8z3hncpfhr1" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/29/%E7%9C%9F%E6%AD%A3%E6%84%8F%E4%B9%89%E4%B8%8A%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="cmfy1wevu0007ykz3gief6sj6" data-title="真正意义上的第一篇" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -460,7 +560,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cmfxqjnlv0002y8z352g274y3" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="cmfy1wevs0003ykz3bsuu21yv" data-title="我的第一篇博客文章" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -511,7 +611,7 @@ OJ-online judge在线判题
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://henryjhr666.github.io/2024/10/27/hello-world/" data-id="cmfxqjnlr0000y8z38sn8c5gs" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://henryjhr666.github.io/2024/10/27/hello-world/" data-id="cmfy1wevo0000ykz3czbpcmoa" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -559,6 +659,10 @@ OJ-online judge在线判题
       <ul>
         
           <li>
+            <a href="/2025/09/24/%E8%BD%BB%E8%BD%BB%E6%9D%BE%E6%9D%BE%E6%90%9E%E5%AE%9A%20-%20%E5%89%AF%E6%9C%AC/">今晚完成了文献综述初稿</a>
+          </li>
+        
+          <li>
             <a href="/2025/09/22/%E8%BD%BB%E8%BD%BB%E6%9D%BE%E6%9D%BE%E6%90%9E%E5%AE%9A/">轻轻松松搞定</a>
           </li>
         
@@ -572,10 +676,6 @@ OJ-online judge在线判题
         
           <li>
             <a href="/2025/09/21/%E9%87%8D%E8%BF%94%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">重返我的博客</a>
-          </li>
-        
-          <li>
-            <a href="/2024/12/04/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">随便写点</a>
           </li>
         
       </ul>
